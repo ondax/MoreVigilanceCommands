@@ -21,6 +21,7 @@ namespace MoreVIgilanceCommands
             Info(Name + " enabled succesfully");
             AddCommand("clearbc", new ClearBCCommand(this));
             AddCommand("shake", new ShakeCommand(this));
+            AddCommand("spawnworkbench", new SpawnWorkbenchCommand(this));
         }
     }
 }
