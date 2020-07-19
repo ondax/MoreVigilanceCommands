@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Vigilance.Core;
 
@@ -24,6 +25,7 @@ namespace MoreVIgilanceCommands
             AddCommand("spawnworkbench", new SpawnWorkbenchCommand(this));
             AddCommand("cleanup", new CleanupCommand(this));
             AddCommand("clearcards", new ClearCardsCommand(this));
+            AddCommand("clearall", new ClearAllCommand(this));
         }
     }
 }
