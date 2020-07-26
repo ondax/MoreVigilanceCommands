@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Vigilance.Core;
+﻿using Vigilance.Commands.API;
 using Vigilance.API;
 
 namespace MoreVIgilanceCommands
@@ -15,9 +12,9 @@ namespace MoreVIgilanceCommands
 
         public string Description => "Clears all keycards";
 
-        public string OnCall(CommandSender sender, string[] args)
+        public string OnCall(Player sender, string[] args)
         {
-            for(int i = 0; i<12; i++)
+            for (int i = 0; i < 12; i++)
             {
                 Server.RunCommand("clean "+i);
             }

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Vigilance.Core;
+﻿using Vigilance;
 
 namespace MoreVIgilanceCommands
 {
     class MoreVigilanceCommands : Plugin
     {
         public override string Id => "morevigilancecommands";
-
         public override string Name => "MoreVigilanceCommands";
 
         public override void OnDisable()

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Vigilance.Core;
+﻿using Vigilance.Commands.API;
 using Vigilance.API;
 
 namespace MoreVIgilanceCommands
@@ -14,9 +11,9 @@ namespace MoreVIgilanceCommands
 
         public string Description => "Shakes the map";
 
-        public string OnCall(CommandSender sender, string[] args)
+        public string OnCall(Player sender, string[] args)
         {
-            Map.Shake();
+            Map.Warhead.Shake();
             return "Shaked succesfully";
         }
     }
