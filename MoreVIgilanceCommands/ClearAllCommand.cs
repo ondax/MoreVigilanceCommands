@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Vigilance.Commands.API;
 using Vigilance.API;
-using Vigilance.Core;
 
 namespace MoreVIgilanceCommands
 {
@@ -15,10 +12,9 @@ namespace MoreVIgilanceCommands
 
         public string Description => "Clears all items";
 
-        public string OnCall(CommandSender sender, string[] args)
+        public string OnCall(Player sender, string[] args)
         {
-            List<Pickup> items = Map.Pickups;
-            foreach(Pickup pickup in items)
+            foreach (Pickup pickup in Map.Pickups)
             {
                 pickup.Delete();
             }
