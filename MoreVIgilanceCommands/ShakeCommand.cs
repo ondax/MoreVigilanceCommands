@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Vigilance.Core;
-using Vigilance.API;
+﻿using Vigilance.API;
+using Vigilance.API.Commands;
 
-namespace MoreVIgilanceCommands
+namespace MoreVigilanceCommands
 {
-    class ShakeCommand : Command
+    public class ShakeCommand : Command
     {
         public MoreVigilanceCommands plugin;
         public ShakeCommand(MoreVigilanceCommands mvc) => plugin = mvc;
         public string Usage => "shake";
 
-        public string Description => "Shakes the map";
+        public bool OverwriteBaseGameCommand => false;
 
-        public string OnCall(CommandSender sender, string[] args)
+        public string OnCall(Player sender, string[] args)
         {
-            Map.Shake();
-            return "Shaked succesfully";
+            Map.Warhead.Shake();
+            return "Success";
         }
     }
 }

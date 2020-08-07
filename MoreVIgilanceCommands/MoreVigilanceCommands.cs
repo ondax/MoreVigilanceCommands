@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Vigilance.Core;
+﻿using Vigilance;
+using Vigilance.Commands;
+using Vigilance.API.Commands;
+using Vigilance.API.Handlers;
 
-namespace MoreVIgilanceCommands
+namespace MoreVigilanceCommands
 {
-    class MoreVigilanceCommands : Plugin
+    public class MoreVigilanceCommands : Plugin
     {
         public override string Id => "morevigilancecommands";
 
@@ -14,18 +13,14 @@ namespace MoreVIgilanceCommands
 
         public override void OnDisable()
         {
-            Info(Name + " disabled succesfully");
+            Info(Name + " disabled");
         }
 
         public override void OnEnable()
         {
-            Info(Name + " enabled succesfully");
-            AddCommand("clearbc", new ClearBCCommand(this));
+            Info(Name + " enabled");
             AddCommand("shake", new ShakeCommand(this));
-            AddCommand("spawnworkbench", new SpawnWorkbenchCommand(this));
-            AddCommand("cleanup", new CleanupCommand(this));
-            AddCommand("clearcards", new ClearCardsCommand(this));
-            AddCommand("clearall", new ClearAllCommand(this));
+            AddHandler(new RemoteKeycardHandler(this));
         }
     }
 }

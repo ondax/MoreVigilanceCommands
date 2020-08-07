@@ -8,14 +8,14 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\references\vigilance\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\references\vigilance\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
     <Reference Include="Mirror">
       <HintPath>..\..\..\references\vigilance\Mirror.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\references\vigilance\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Vigilance">
+      <HintPath>..\..\..\references\vigilance\Vigilance.dll</HintPath>
     </Reference>
   </ItemGroup>
 
