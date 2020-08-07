@@ -20,6 +20,9 @@ namespace MoreVigilanceCommands
         {
             Info(Name + " enabled");
             AddCommand("shake", new ShakeCommand(this));
+            AddCommand("cleanup", new CleanupCommand(this));
+            AddCommand("clearcards", new ClearCardsCommand(this));
+            AddCommand("clearall", new ClearAllCommand(this));
             AddHandler(new RemoteKeycardHandler(this));
         }
     }
