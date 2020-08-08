@@ -24,6 +24,7 @@ namespace MoreVigilanceCommands
             AddCommand("clearcards", new ClearCardsCommand(this));
             AddCommand("clearall", new ClearAllCommand(this));
             AddCommand("clearnear", new ClearNearCommand(this));
+            AddCommand("postp", new PositionTeleportCommand(this));
             AddHandler(new RemoteKeycardHandler(this));
         }
     }
