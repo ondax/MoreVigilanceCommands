@@ -1,5 +1,6 @@
 ﻿using Vigilance.API;
 using Vigilance.API.Commands;
+using Vigilance.API.Extensions;
 
 namespace MoreVigilanceCommands
 {
@@ -39,18 +40,30 @@ namespace MoreVigilanceCommands
             }
             if (!isScientistorClassD)
             {
-                Server.RunCommand("clean 22");
-                Server.RunCommand("clean 27");
-                Server.RunCommand("clean 28");
-                Server.RunCommand("clean 29");
+                foreach(Pickup pickup in Map.Pickups)
+                {
+                    if(pickup.ItemId == ItemType.Ammo556|| pickup.ItemId == ItemType.Ammo762|| pickup.ItemId == ItemType.Ammo9mm|| pickup.ItemId == ItemType.Disarmer)
+                    {
+                        pickup.Delete();
+                    }
+                }
             }
             if (!is079)
             {
-                Server.RunCommand("clean 19");
+                foreach (Pickup pickup in Map.Pickups)
+                {
+                    if (pickup.ItemId == ItemType.WeaponManagerTablet)
+                    {
+                        pickup.Delete();
+                    }
+                }
             }
             if (!is049)
             {
-                Server.RunCommand("clearragdolls");
+                foreach(Ragdoll ragdoll in Map.Ragdolls)
+                {
+                    ragdoll.Delete();
+                }
             }
             return "Cleanup succesfull";
         }

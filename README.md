@@ -1,3 +1,4 @@
 # MoreVigilanceCommands
  Adds some commands to SCP:SL plugin loader Vigilance
-Currently working commands: clearbc, shake, spawnworkbench, cleanup, clearcards, clearall
+Commands: clearbc, shake, cleanup, clearcards, clearall, clearnear
+Configs: mvc_remotekeycard_enabled

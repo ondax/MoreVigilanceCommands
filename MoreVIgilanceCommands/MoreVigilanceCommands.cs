@@ -23,6 +23,7 @@ namespace MoreVigilanceCommands
             AddCommand("cleanup", new CleanupCommand(this));
             AddCommand("clearcards", new ClearCardsCommand(this));
             AddCommand("clearall", new ClearAllCommand(this));
+            AddCommand("clearnear", new ClearNearCommand(this));
             AddHandler(new RemoteKeycardHandler(this));
         }
     }

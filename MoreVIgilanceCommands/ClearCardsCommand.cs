@@ -14,9 +14,12 @@ namespace MoreVigilanceCommands
 
         public string OnCall(Player sender, string[] args)
         {
-            for (int i = 0; i < 12; i++)
+            foreach(Pickup pickup in Map.Pickups)
             {
-                Server.RunCommand("clean " + i);
+                if(pickup.ItemId == ItemType.KeycardChaosInsurgency|| pickup.ItemId == ItemType.KeycardContainmentEngineer|| pickup.ItemId == ItemType.KeycardFacilityManager|| pickup.ItemId == ItemType.KeycardGuard|| pickup.ItemId == ItemType.KeycardJanitor|| pickup.ItemId == ItemType.KeycardNTFCommander|| pickup.ItemId == ItemType.KeycardNTFLieutenant|| pickup.ItemId == ItemType.KeycardO5|| pickup.ItemId == ItemType.KeycardScientist || pickup.ItemId == ItemType.KeycardScientistMajor || pickup.ItemId == ItemType.KeycardSeniorGuard || pickup.ItemId == ItemType.KeycardZoneManager)
+                {
+                    pickup.Delete();
+                }
             }
             return "All cards cleared";
         }
