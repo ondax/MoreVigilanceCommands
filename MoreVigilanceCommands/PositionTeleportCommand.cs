@@ -1,32 +1,44 @@
-﻿using Vigilance.API;
-using Vigilance.API.Commands;
-using Vigilance.API.Extensions;
+﻿using UnityEngine;
+using Vigilance;
+using Vigilance.API;
+using Vigilance.Extensions;
 
 namespace MoreVigilanceCommands
 {
-    class PositionTeleportCommand : Command
+    class PositionTeleportCommand : CommandHandler
     {
-        public MoreVigilanceCommands plugin;
-        public PositionTeleportCommand(MoreVigilanceCommands mvc) => plugin = mvc;
+        public string Command => "positionteleport";
 
-        public string Usage => "postp <player> <x> <y> <z>";
+        public string Usage => "postp <player/all/*> <x> <y> <z>";
 
-        public bool OverwriteBaseGameCommand => false;
+        public string Aliases => "postp tppos";
 
-        public string OnCall(Player sender, string[] args)
+        public string Execute(Player sender, string[] args)
         {
-            if (args.Length<5)
+            if(args.Length<4)
             {
                 return Usage;
             }
             else
             {
-                Player target = args[1].GetPlayer();
-                float x = float.Parse(args[2]);
-                float y = float.Parse(args[3]);
-                float z = float.Parse(args[4]);
-                target.Position = new UnityEngine.Vector3(x, y, z);
-                return "Player teleported";
+                float x = float.Parse(args[1]);
+                float y = float.Parse(args[2]);
+                float z = float.Parse(args[3]);
+                Vector3 position = new Vector3(x, y, z);
+                if (args[0] == "*" || args[0] == "all")
+                {
+                    foreach(Player player in Server.Players)
+                    {
+                        player.Teleport(position);
+                    }
+                    return "All players teleported";
+                }
+                else
+                {
+                    Player player = args[0].GetPlayer();
+                    player.Teleport(position);
+                    return "Player teleported";
+                }
             }
         }
     }

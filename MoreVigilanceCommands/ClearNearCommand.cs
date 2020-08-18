@@ -1,50 +1,76 @@
-﻿using Vigilance.API;
-using Vigilance.API.Commands;
-using Vigilance.API.Extensions;
+﻿using Vigilance;
+using Vigilance.API;
+using Vigilance.Extensions;
 
 namespace MoreVigilanceCommands
 {
-    class ClearNearCommand : Command
+    class ClearNearCommand : CommandHandler
     {
-        public MoreVigilanceCommands plugin;
-        public ClearNearCommand(MoreVigilanceCommands mvc) => plugin = mvc;
+        public string Command => "clearnear";
 
-        public string Usage => "clearnear <player> [radius-default=2]";
+        public string Usage => "clearnear <player/all/*> [radius]";
 
-        public bool OverwriteBaseGameCommand => false;
+        public string Aliases => "clrnear cleannear";
 
-        public string OnCall(Player sender, string[] args)
+        public string Execute(Player sender, string[] args)
         {
-            if (args.Length < 2)
+            float radius = 2;
+            if(args.Length<1)
             {
                 return Usage;
             }
-            else 
+            else
             {
-                Player target = args[1].GetPlayer();
-                int radius = 100;
-                if(args.Length<3)
+                if(args.Length>=2)
                 {
-                    radius = 2;
+                    radius = float.Parse(args[1]);
                 }
                 else
                 {
-                    radius = int.Parse(args[2]);
+                    radius = 2;
                 }
-                float playerX = target.Position.x;
-                float playerY = target.Position.y;
-                float playerZ = target.Position.z;
-                foreach (Pickup pickup in Map.Pickups)
+                if (args[0]=="*"||args[0]=="all")
                 {
-                    float pickupX = pickup.position.x;
-                    float pickupY = pickup.position.y;
-                    float pickupZ = pickup.position.z;
-                    if (pickupX-playerX<=radius&&pickupX-playerX>=-radius && pickupY - playerY <= radius && pickupY - playerY >= -radius && pickupZ - playerZ <= radius && pickupZ - playerZ >= -radius)
+                    foreach(Player player in Server.Players)
                     {
-                        pickup.Delete();
+                        foreach(Pickup pickup in Map.Pickups)
+                        {
+                            if (isInRadius(player, pickup, radius))
+                            {
+                                pickup.Delete();
+                            }
+                        }
                     }
                 }
-                return "Near items deleted";
+                else
+                {
+                    Player player = args[0].GetPlayer();
+                    foreach (Pickup pickup in Map.Pickups)
+                    {
+                        if (isInRadius(player, pickup, radius))
+                        {
+                            pickup.Delete();
+                        }
+                    }
+                }
+                return "All near items deleted";
+            }
+        }
+        bool isInRadius(Player player, Pickup pickup, float radius)
+        {
+            float playerX = player.Position.x;
+            float playerY = player.Position.y;
+            float playerZ = player.Position.z;
+            float pickupX = pickup.position.x;
+            float pickupY = pickup.position.y;
+            float pickupZ = pickup.position.z;
+            if (pickupX - playerX <= radius && pickupX - playerX >= -radius && pickupY - playerY <= radius && pickupY - playerY >= -radius && pickupZ - playerZ <= radius && pickupZ - playerZ >= -radius)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

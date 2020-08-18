@@ -1,20 +1,20 @@
-﻿using Vigilance.API;
-using Vigilance.API.Commands;
+﻿using Vigilance;
+using Vigilance.API;
 
 namespace MoreVigilanceCommands
 {
-    public class ShakeCommand : Command
+    class ShakeCommand : CommandHandler
     {
-        public MoreVigilanceCommands plugin;
-        public ShakeCommand(MoreVigilanceCommands mvc) => plugin = mvc;
+        public string Command => "shake";
+
         public string Usage => "shake";
 
-        public bool OverwriteBaseGameCommand => false;
+        public string Aliases => "shk";
 
-        public string OnCall(Player sender, string[] args)
+        public string Execute(Player sender, string[] args)
         {
             Map.Warhead.Shake();
-            return "Success";
+            return "Shaked succesfully";
         }
     }
 }

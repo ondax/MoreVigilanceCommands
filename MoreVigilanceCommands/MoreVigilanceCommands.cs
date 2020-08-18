@@ -1,31 +1,29 @@
 ﻿using Vigilance;
-using Vigilance.Commands;
-using Vigilance.API.Commands;
-using Vigilance.API.Handlers;
 
 namespace MoreVigilanceCommands
 {
-    public class MoreVigilanceCommands : Plugin
+    class MoreVigilanceCommands : Plugin
     {
-        public override string Id => "morevigilancecommands";
-
         public override string Name => "MoreVigilanceCommands";
 
-        public override void OnDisable()
+        public override void Disable()
         {
-            Info(Name + " disabled");
+            Log.Add(Name + " disabled succesfully", LogType.Info);
         }
 
-        public override void OnEnable()
+        public override void Enable()
         {
-            Info(Name + " enabled");
-            AddCommand("shake", new ShakeCommand(this));
-            AddCommand("cleanup", new CleanupCommand(this));
-            AddCommand("clearcards", new ClearCardsCommand(this));
-            AddCommand("clearall", new ClearAllCommand(this));
-            AddCommand("clearnear", new ClearNearCommand(this));
-            AddCommand("postp", new PositionTeleportCommand(this));
-            AddHandler(new RemoteKeycardHandler(this));
+            Log.Add(Name + " enabled succesfully", LogType.Info);
+            CommandManager.RegisterCommand(new ClearNearCommand());
+            CommandManager.RegisterCommand(new ShakeCommand());
+            CommandManager.RegisterCommand(new CleanupCommand());
+            CommandManager.RegisterCommand(new ClearCardsCommand());
+            CommandManager.RegisterCommand(new PositionTeleportCommand());
+        }
+
+        public override void Reload()
+        {
+            Log.Add(Name + " reloaded succesfully", LogType.Info);
         }
     }
 }

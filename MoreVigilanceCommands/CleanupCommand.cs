@@ -1,18 +1,18 @@
-﻿using Vigilance.API;
-using Vigilance.API.Commands;
-using Vigilance.API.Extensions;
+﻿using Vigilance;
+using Vigilance.API;
+using Vigilance.Extensions;
 
 namespace MoreVigilanceCommands
 {
-    class CleanupCommand : Command
+    class CleanupCommand : CommandHandler
     {
-        public MoreVigilanceCommands plugin;
-        public CleanupCommand(MoreVigilanceCommands mvc) => plugin = mvc;
+        public string Command => "cleanup";
+
         public string Usage => "cleanup";
 
-        public bool OverwriteBaseGameCommand => false;
+        public string Aliases => "cleanunneeded";
 
-        public string OnCall(Player sender, string[] args)
+        public string Execute(Player sender, string[] args)
         {
             bool is049 = false;
             bool isScientistorClassD = false;
@@ -40,9 +40,9 @@ namespace MoreVigilanceCommands
             }
             if (!isScientistorClassD)
             {
-                foreach(Pickup pickup in Map.Pickups)
+                foreach (Pickup pickup in Map.Pickups)
                 {
-                    if(pickup.ItemId == ItemType.Ammo556|| pickup.ItemId == ItemType.Ammo762|| pickup.ItemId == ItemType.Ammo9mm|| pickup.ItemId == ItemType.Disarmer)
+                    if (pickup.ItemId == ItemType.Ammo556 || pickup.ItemId == ItemType.Ammo762 || pickup.ItemId == ItemType.Ammo9mm || pickup.ItemId == ItemType.Disarmer)
                     {
                         pickup.Delete();
                     }
@@ -60,7 +60,7 @@ namespace MoreVigilanceCommands
             }
             if (!is049)
             {
-                foreach(Ragdoll ragdoll in Map.Ragdolls)
+                foreach (Ragdoll ragdoll in Map.Ragdolls)
                 {
                     ragdoll.Delete();
                 }
