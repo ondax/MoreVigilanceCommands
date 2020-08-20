@@ -54,6 +54,7 @@ namespace MoreVigilanceCommands
                         }
                     }
                 }
+                Log.Add("Used command clearnear", Vigilance.LogType.Debug);
                 return "All near items deleted";
             }
         }

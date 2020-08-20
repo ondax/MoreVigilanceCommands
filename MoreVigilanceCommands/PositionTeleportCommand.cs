@@ -31,12 +31,14 @@ namespace MoreVigilanceCommands
                     {
                         player.Teleport(position);
                     }
+                    Log.Add("All players teleported to " + x + ", " + y + ", " + z, Vigilance.LogType.Debug);
                     return "All players teleported";
                 }
                 else
                 {
                     Player player = args[0].GetPlayer();
                     player.Teleport(position);
+                    Log.Add("Player " + player.Nick + " teleported to " + +x + ", " + y + ", " + z, Vigilance.LogType.Debug);
                     return "Player teleported";
                 }
             }

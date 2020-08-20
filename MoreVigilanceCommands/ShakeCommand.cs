@@ -14,6 +14,7 @@ namespace MoreVigilanceCommands
         public string Execute(Player sender, string[] args)
         {
             Map.Warhead.Shake();
+            Log.Add("Map shaked", LogType.Debug);
             return "Shaked succesfully";
         }
     }

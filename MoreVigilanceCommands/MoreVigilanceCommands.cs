@@ -19,7 +19,7 @@ namespace MoreVigilanceCommands
             CommandManager.RegisterCommand(new CleanupCommand());
             CommandManager.RegisterCommand(new ClearCardsCommand());
             CommandManager.RegisterCommand(new PositionTeleportCommand());
-            CommandManager.RegisterCommand(new WaypointCommand());
+            CommandManager.RegisterCommand(new WarpCommand());
         }
 
         public override void Reload()

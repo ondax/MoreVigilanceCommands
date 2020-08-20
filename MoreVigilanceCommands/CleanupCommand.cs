@@ -65,6 +65,7 @@ namespace MoreVigilanceCommands
                     ragdoll.Delete();
                 }
             }
+            Log.Add("Cleanup complete", LogType.Debug);
             return "Cleanup succesfull";
         }
     }
