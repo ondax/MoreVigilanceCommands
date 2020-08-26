@@ -20,6 +20,7 @@ namespace MoreVigilanceCommands
             CommandManager.RegisterCommand(new ClearCardsCommand());
             CommandManager.RegisterCommand(new PositionTeleportCommand());
             CommandManager.RegisterCommand(new WarpCommand());
+            CommandManager.RegisterCommand(new MuteAllCommand());
         }
 
         public override void Reload()
