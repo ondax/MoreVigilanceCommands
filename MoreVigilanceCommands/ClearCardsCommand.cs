@@ -21,7 +21,7 @@ namespace MoreVigilanceCommands
                     pickup.Delete();
                 }
             }
-            Log.Add("All cards deleted", LogType.Debug);
+            MoreVigilanceCommands.singleton.AddLog("All cards deleted");
             return "All cards deleted";
         }
     }

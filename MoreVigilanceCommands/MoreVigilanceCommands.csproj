@@ -5,20 +5,299 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\scpftp\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="AmplifyBloom">
+      <HintPath>..\..\..\..\scpftp\Managed\AmplifyBloom.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\references\vigilance\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\..\..\references\vigilance\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\..\scpftp\Managed\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Decal">
+      <HintPath>..\..\..\..\scpftp\Managed\ch.sycoforge.Decal.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Logging">
+      <HintPath>..\..\..\..\scpftp\Managed\ch.sycoforge.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Unity.Runtime">
+      <HintPath>..\..\..\..\scpftp\Managed\ch.sycoforge.Unity.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CloudflareSolverRe">
+      <HintPath>..\..\..\..\scpftp\Managed\CloudflareSolverRe.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\..\..\..\scpftp\Managed\CommandSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DissonanceVoip">
+      <HintPath>..\..\..\..\scpftp\Managed\DissonanceVoip.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Posix">
+      <HintPath>..\..\..\..\scpftp\Managed\Facepunch.Steamworks.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="libvideo">
+      <HintPath>..\..\..\..\scpftp\Dependencies\libvideo.dll</HintPath>
+    </Reference>
     <Reference Include="Mirror">
       <HintPath>..\..\..\references\vigilance\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Authenticators">
+      <HintPath>..\..\..\..\scpftp\Managed\Mirror.Authenticators.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Components">
+      <HintPath>..\..\..\..\scpftp\Managed\Mirror.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX">
+      <HintPath>..\..\..\..\scpftp\Managed\Mono.CecilX.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Mdb">
+      <HintPath>..\..\..\..\scpftp\Managed\Mono.CecilX.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Pdb">
+      <HintPath>..\..\..\..\scpftp\Managed\Mono.CecilX.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Rocks">
+      <HintPath>..\..\..\..\scpftp\Managed\Mono.CecilX.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Nat">
+      <HintPath>..\..\..\..\scpftp\Managed\Mono.Nat.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>..\..\..\..\scpftp\Managed\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\scpftp\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\scpftp\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthwoodLib">
+      <HintPath>..\..\..\..\scpftp\Managed\NorthwoodLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SerializedData">
+      <HintPath>..\..\..\..\scpftp\Managed\SerializedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\..\..\scpftp\Managed\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\scpftp\Managed\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\scpftp\Managed\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\..\..\..\scpftp\Managed\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\..\..\scpftp\Managed\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+      <HintPath>..\..\..\..\scpftp\Managed\System.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Internals">
+      <HintPath>..\..\..\..\scpftp\Managed\System.ServiceModel.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="Telepathy">
+      <HintPath>..\..\..\..\scpftp\Managed\Telepathy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\..\..\scpftp\Managed\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\scpftp\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\references\vigilance\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\scpftp\Managed\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
     <Reference Include="Vigilance">
       <HintPath>..\..\..\references\vigilance\Vigilance.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.unity">
+      <HintPath>..\..\..\..\scpftp\Managed\zxing.unity.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -5,14 +5,16 @@ namespace MoreVigilanceCommands
     class MoreVigilanceCommands : Plugin
     {
         public override string Name => "MoreVigilanceCommands";
-
+        public static Plugin singleton;
         public override void Disable()
         {
-            Log.Add(Name + " disabled succesfully", LogType.Info);
+            singleton = null;
+            AddLog(Name + " disabled succesfully");
         }
 
         public override void Enable()
         {
+            singleton = this;
             Log.Add(Name + " enabled succesfully", LogType.Info);
             CommandManager.RegisterCommand(new ClearNearCommand());
             CommandManager.RegisterCommand(new ShakeCommand());
@@ -25,7 +27,7 @@ namespace MoreVigilanceCommands
 
         public override void Reload()
         {
-            Log.Add(Name + " reloaded succesfully", LogType.Info);
+            AddLog(Name + " reloaded succesfully");
         }
     }
 }
