@@ -4,12 +4,10 @@ using Vigilance.Extensions;
 
 namespace MoreVigilanceCommands
 {
-    class CleanupCommand : CommandHandler
+    public class CleanupCommand : CommandHandler
     {
         public string Command => "cleanup";
-
         public string Usage => "cleanup";
-
         public string Aliases => "cleanunneeded";
 
         public string Execute(Player sender, string[] args)

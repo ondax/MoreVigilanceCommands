@@ -2,20 +2,16 @@
 
 namespace MoreVigilanceCommands
 {
-    class MoreVigilanceCommands : Plugin
+    public class MVC : Plugin
     {
         public override string Name => "MoreVigilanceCommands";
-        public static Plugin singleton;
-        public override void Disable()
-        {
-            singleton = null;
-            AddLog(Name + " disabled succesfully");
-        }
+        public static MVC Singleton { get; set; }
+
+        public override void Disable() { }
 
         public override void Enable()
         {
-            singleton = this;
-            Log.Add(Name + " enabled succesfully", LogType.Info);
+            Singleton = this;
             CommandManager.RegisterCommand(new ClearNearCommand());
             CommandManager.RegisterCommand(new ShakeCommand());
             CommandManager.RegisterCommand(new CleanupCommand());
@@ -23,11 +19,9 @@ namespace MoreVigilanceCommands
             CommandManager.RegisterCommand(new PositionTeleportCommand());
             CommandManager.RegisterCommand(new WarpCommand());
             CommandManager.RegisterCommand(new MuteAllCommand());
+            Log.Add(Name + " enabled succesfully", LogType.Info);
         }
 
-        public override void Reload()
-        {
-            AddLog(Name + " reloaded succesfully");
-        }
+        public override void Reload() { /* useless since there is nothing to reload */ }
     }
 }
