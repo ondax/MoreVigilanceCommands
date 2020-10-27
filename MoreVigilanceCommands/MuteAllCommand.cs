@@ -3,20 +3,18 @@ using Vigilance.API;
 
 namespace MoreVigilanceCommands
 {
-    class MuteAllCommand : CommandHandler
+    public class MuteAllCommand : CommandHandler
     {
         public bool muted = false;
         public string Command => "muteall";
-
         public string Usage => "muteall";
-
         public string Aliases => "mall";
 
         public string Execute(Player sender, string[] args)
         {
-            foreach(Player player in Server.Players)
+            foreach (Player player in Server.Players)
             {
-                if(!player.Hub.serverRoles.RemoteAdmin)
+                if (!player.RemoteAdmin)
                 {
                     player.IsMuted = !muted;
                 }

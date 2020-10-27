@@ -5,17 +5,15 @@ using Vigilance.Extensions;
 
 namespace MoreVigilanceCommands
 {
-    class PositionTeleportCommand : CommandHandler
+    public class PositionTeleportCommand : CommandHandler
     {
         public string Command => "positionteleport";
-
         public string Usage => "postp <player/all/*> <x> <y> <z>";
-
         public string Aliases => "postp tppos";
 
         public string Execute(Player sender, string[] args)
         {
-            if(args.Length<4)
+            if (args.Length < 4)
             {
                 return Usage;
             }
@@ -27,7 +25,7 @@ namespace MoreVigilanceCommands
                 Vector3 position = new Vector3(x, y, z);
                 if (args[0] == "*" || args[0] == "all")
                 {
-                    foreach(Player player in Server.Players)
+                    foreach (Player player in Server.Players)
                     {
                         player.Teleport(position);
                     }

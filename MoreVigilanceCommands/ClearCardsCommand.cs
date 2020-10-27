@@ -4,7 +4,7 @@ using Vigilance.Extensions;
 
 namespace MoreVigilanceCommands
 {
-    class ClearCardsCommand : CommandHandler
+    public class ClearCardsCommand : CommandHandler
     {
         public string Command => "clearcards";
 
@@ -14,14 +14,14 @@ namespace MoreVigilanceCommands
 
         public string Execute(Player sender, string[] args)
         {
-            foreach(Pickup pickup in Map.Pickups)
+            foreach (Pickup pickup in Map.Pickups)
             {
                 if (pickup.ItemId.IsKeycard())
                 {
                     pickup.Delete();
                 }
             }
-            MoreVigilanceCommands.singleton.AddLog("All cards deleted");
+            MVC.Singleton.Info("All cards deleted");
             return "All cards deleted";
         }
     }
