@@ -12,13 +12,20 @@ namespace MoreVigilanceCommands
         public override void Enable()
         {
             Singleton = this;
-            CommandManager.RegisterCommand(new ClearNearCommand());
+            //commands
+            //Not currently working
+            //CommandManager.RegisterCommand(new ClearNearCommand());
             CommandManager.RegisterCommand(new ShakeCommand());
             CommandManager.RegisterCommand(new CleanupCommand());
             CommandManager.RegisterCommand(new ClearCardsCommand());
             CommandManager.RegisterCommand(new PositionTeleportCommand());
             CommandManager.RegisterCommand(new WarpCommand());
             CommandManager.RegisterCommand(new MuteAllCommand());
+            CommandManager.RegisterCommand(new ListAdminsCommand());
+            CommandManager.RegisterCommand(new VanishCommand());
+            //game commands
+            CommandManager.RegisterGameCommand(new ShowTagCommand());
+            CommandManager.RegisterGameCommand(new HideTagCommand());
             Log.Add(Name + " enabled succesfully", LogType.Info);
         }
 
